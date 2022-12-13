@@ -1,24 +1,22 @@
 window.onload = function(){
-   var result = '\n';
-   for (var i = 1; i <= 12; i++) {
-      console.log(i)
-      document.write(i+" : ")
+   for (var i = 2; i <= 30; i++) {
+     var a = 0;
+     
       
-  // document.getElementById("num").innerHTML=i +":";
-         //document.write(i+" : ")
-       for (var j = 1; j <=12; j++) {
-      var num=i;
-      document.write((i*j) + ' ')
-
-         //   result += (i*j) + ' ';
-         //   result += ;
-  // document.getElementById("num").innerHTML=num+": "+result;
-
-       }
-       document.write("</br>");
-      
-
-   }
+      for (var j = 2; j < i; j++) {
+          if (i % j == 0) {
+             a = 1;
+              
+              break;
+            
+          }
+      }
+      if (i > 1 && a== 0) {
+         console.log(i)
+        document.write(i+" ");
+      }
+     
+  }
    
          
 };
